@@ -23,14 +23,18 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
 >
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.ogrehus.core</groupId>
-	<artifactId>user</artifactId>
-	<packaging>jar</packaging>	
-	
+	<groupId>org.ogrehus.gluttony</groupId>
+	<artifactId>foundation</artifactId>
+	<version>0.0.1-SNAPSHOT</version>	
+	<packaging>pom</packaging>	
+
 	<parent>
 		<groupId>org.ogrehus</groupId>
-		<artifactId>core</artifactId>
+		<artifactId>gluttony</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	
+	<modules>
+		<module>pattern</module>
+	</modules>
 </project>
