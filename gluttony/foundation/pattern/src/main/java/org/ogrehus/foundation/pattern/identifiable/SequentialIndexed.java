@@ -19,28 +19,23 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * 
  */	
-package org.ogrehus.yafm.association.api;
-
-import java.time.Instant;
+package org.ogrehus.foundation.pattern.identifiable;
 
 /**
- * An AssociationOrganization represents the underlying structure of the association.
- * <p>
- * The organization shall provide informations like representatives, responsibilities or any historical informations.
- * </p>
+ * An Identifiable provides access to a given identifier of the entity.
  * 
  * @author Björn Witt
  * 
  */
-public interface AssociationOrganization {
+public interface SequentialIndexed {
 
 
 
 	/**
-	 * Provides the entry date of the belonging of a member to the association.
+	 * Provides the iterating number of the natural indexed order.
 	 * 
-	 * @return Date of entry to the association.
+	 * @return The value of the indexed sequence.
 	 * 
 	 */
-	Instant getFoundedDate();
+	int getSequentialIndex();
 }

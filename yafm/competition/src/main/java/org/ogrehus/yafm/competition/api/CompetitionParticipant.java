@@ -19,28 +19,40 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * 
  */	
-package org.ogrehus.yafm.association.api;
+package org.ogrehus.yafm.competition.api;
 
-import java.time.Instant;
+import java.util.Optional;
+
+import org.ogrehus.foundation.pattern.nameable.Nameable;
 
 /**
- * An AssociationOrganization represents the underlying structure of the association.
- * <p>
- * The organization shall provide informations like representatives, responsibilities or any historical informations.
- * </p>
+ * A CompetitionParticipant represents a competitor of the match competition that can be filled by a joining team or as a bye member.
  * 
  * @author Björn Witt
  * 
  */
-public interface AssociationOrganization {
+public interface CompetitionParticipant
+extends
+	Nameable
+{
 
 
 
 	/**
-	 * Provides the entry date of the belonging of a member to the association.
+	 * Provides the information, if this participant represents no real competitor and act as a free win opponent in a match.
 	 * 
-	 * @return Date of entry to the association.
+	 * @return <code>true</code> if this participant represents no real team and will lose the match, <code>false</code> otherwise.
 	 * 
 	 */
-	Instant getFoundedDate();
+	boolean isBye();
+
+
+
+	/**
+	 * Provides the team acting as the participant in this competition.
+	 * 
+	 * @return The team that joins the competition, or empty if this participant is a bye.
+	 * 
+	 */
+	Optional<CompetitionTeam> getTeam();
 }

@@ -35,6 +35,8 @@ import org.ogrehus.foundation.pattern.nameable.Nameable;
  * 
  * @param <O> Type of organization that organized the association, must inherit.
  * 
+ * @author Björn Witt
+ * 
  */
 public interface Association<
 	O extends AssociationOrganization
@@ -63,9 +65,9 @@ public interface Association<
 	 * 
 	 */
 	Set<Membership<?>> getMemberships();
-	
-	
-	
+
+
+
 	/**
 	 * Provides all Members by a specific type.
 	 * 

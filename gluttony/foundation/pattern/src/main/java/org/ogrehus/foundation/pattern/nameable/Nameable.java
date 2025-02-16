@@ -23,12 +23,14 @@ package org.ogrehus.foundation.pattern.nameable;
 
 /**
  * A nameable provides access to a given name of the entity.
+ *
+ * @author Björn Witt
  * 
  */
 public interface Nameable {
-	
-	
-	
+
+
+
 	/**
 	 * Provides the name of this entity.
 	 * 

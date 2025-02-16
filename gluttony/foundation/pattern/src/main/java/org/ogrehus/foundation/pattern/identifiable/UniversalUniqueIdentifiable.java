@@ -26,11 +26,13 @@ import java.util.UUID;
 /**
  * An UniversalUniqueIdentifiable provides access to a specific type of identifier ((UUID) of the entity.
  * 
+ * @author Björn Witt
+ * 
  */
 public interface UniversalUniqueIdentifiable extends Identifiable<UUID> {
-	
-	
-	
+
+
+
 	/**
 	 * Provides the universal unique identifier of this entity.
 	 * 

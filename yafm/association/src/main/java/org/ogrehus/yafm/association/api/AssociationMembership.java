@@ -29,6 +29,8 @@ import java.time.Instant;
  * The membership stores additional information of the membership.
  * </p>
  * 
+ * @author Björn Witt
+ * 
  */
 public interface AssociationMembership
 extends

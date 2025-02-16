@@ -28,11 +28,13 @@ import org.ogrehus.foundation.pattern.nameable.Nameable;
  * An AssociatedClub represents a composite of teams, 
  * that are allowed to participate in competitions of an association.
  * 
+ * @author Björn Witt
+ * 
  */
 public interface AssociatedClub
 extends
 	  Nameable
 	, Acronymable
 {
-	// nothing defined here, is a conglomeration of existing interface usages.
+	// nothing defined here, is a composition or specialization of existing interface usages.
 }

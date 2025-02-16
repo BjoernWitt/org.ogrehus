@@ -19,28 +19,39 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * 
  */	
-package org.ogrehus.yafm.association.api;
-
-import java.time.Instant;
+package org.ogrehus.yafm.competition.api;
 
 /**
- * An AssociationOrganization represents the underlying structure of the association.
- * <p>
- * The organization shall provide informations like representatives, responsibilities or any historical informations.
- * </p>
+ * A MatchType represents a classification of a match that will define the result interpretation.
  * 
  * @author Björn Witt
  * 
  */
-public interface AssociationOrganization {
+public enum MatchType {
+
+	  ELEMINATION(true)
+	, LEAGUE(false)
+	;
+
+
+
+	final boolean needWinner;
+
+
+
+	MatchType(boolean needWinner) {
+		this.needWinner = needWinner;
+	}
 
 
 
 	/**
-	 * Provides the entry date of the belonging of a member to the association.
+	 * Provides the information, if the match need a winner of if a draw will be accepted (League match).
 	 * 
-	 * @return Date of entry to the association.
+	 * @return <code>true</code> if this match needs a decision of a winner, <code>false</code> otherwise.
 	 * 
 	 */
-	Instant getFoundedDate();
+	public boolean isNeedWinner() {
+		return this.needWinner;
+	}
 }

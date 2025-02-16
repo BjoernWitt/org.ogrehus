@@ -19,28 +19,33 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * 
  */	
-package org.ogrehus.yafm.association.api;
-
-import java.time.Instant;
+package org.ogrehus.yafm.competition.api;
 
 /**
- * An AssociationOrganization represents the underlying structure of the association.
- * <p>
- * The organization shall provide informations like representatives, responsibilities or any historical informations.
- * </p>
+ * An EventType represents a classification of an event that will describe an informative relevant event in a match.
  * 
  * @author Björn Witt
  * 
  */
-public interface AssociationOrganization {
+public enum EventType {
 
-
-
-	/**
-	 * Provides the entry date of the belonging of a member to the association.
-	 * 
-	 * @return Date of entry to the association.
-	 * 
-	 */
-	Instant getFoundedDate();
+	  GAME_START
+	, GAME_END
+	, GOAL
+	, KICK_OFF
+	, PLAYER_SUBSTITUTION
+	, YELLOW_CARD
+	, RED_CARD
+	, PENALITY_KICK
+	, FREE_KICK
+	, PLAYER_INJURY
+	, CORNER_KICK
+	, GOAL_KICK
+	, OFFSIDE
+	, THROW_IN
+	, INJURY_TIME
+	, GAME_INTERRUPTION
+	, INCORRECT_DECISION
+	, GENERAL_SITUATION
+	;
 }

@@ -19,28 +19,59 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * 
  */	
-package org.ogrehus.yafm.association.api;
+package org.ogrehus.yafm.competition.api;
 
-import java.time.Instant;
+import org.ogrehus.foundation.pattern.nameable.Titleable;
 
 /**
- * An AssociationOrganization represents the underlying structure of the association.
- * <p>
- * The organization shall provide informations like representatives, responsibilities or any historical informations.
- * </p>
+ * A MatchEvent represents an informative relevant happening in a match.
  * 
  * @author Björn Witt
  * 
  */
-public interface AssociationOrganization {
+public interface MatchEvent
+extends
+	Titleable
+{
 
 
 
 	/**
-	 * Provides the entry date of the belonging of a member to the association.
+	 * Provides the match minute that correspond to the event.
 	 * 
-	 * @return Date of entry to the association.
+	 * @return The match minute that correspond to the event.
 	 * 
 	 */
-	Instant getFoundedDate();
+	int getMatchMinute();
+
+
+
+	/**
+	 * Provides the title of a match event.
+	 * 
+	 * @return The title of a match event.
+	 * 
+	 */
+	@Override
+	String getTitle();
+
+
+
+	/**
+	 * Provides a textual description of the event.
+	 * 
+	 * @return A textual description of the event.
+	 * 
+	 */
+	String getDescription();
+
+
+
+	/**
+	 * Provides the type of the event.
+	 * 
+	 * @return Type of the event.
+	 * 
+	 */
+	EventType getEventType();
 }

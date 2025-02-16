@@ -19,28 +19,18 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * 
  */	
-package org.ogrehus.yafm.association.api;
-
-import java.time.Instant;
+package org.ogrehus.foundation.pattern.time;
 
 /**
- * An AssociationOrganization represents the underlying structure of the association.
- * <p>
- * The organization shall provide informations like representatives, responsibilities or any historical informations.
- * </p>
+ * An Intervalable provides access to a given point of time where something starts and ends.
  * 
  * @author Björn Witt
  * 
  */
-public interface AssociationOrganization {
-
-
-
-	/**
-	 * Provides the entry date of the belonging of a member to the association.
-	 * 
-	 * @return Date of entry to the association.
-	 * 
-	 */
-	Instant getFoundedDate();
+public interface Intervalable
+extends
+	  Startable
+	, Endable
+{
+	// combines Startable and Endable
 }

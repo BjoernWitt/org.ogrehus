@@ -19,28 +19,25 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * 
  */	
-package org.ogrehus.yafm.association.api;
+package org.ogrehus.foundation.pattern.time;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 
 /**
- * An AssociationOrganization represents the underlying structure of the association.
- * <p>
- * The organization shall provide informations like representatives, responsibilities or any historical informations.
- * </p>
+ * A Startable provides access to a given point of time where something starts.
  * 
  * @author Björn Witt
  * 
  */
-public interface AssociationOrganization {
+public interface Startable {
 
 
 
 	/**
-	 * Provides the entry date of the belonging of a member to the association.
+	 * Provides the point of time where something starts.
 	 * 
-	 * @return Date of entry to the association.
+	 * @return The point of time where something starts.
 	 * 
 	 */
-	Instant getFoundedDate();
+	LocalDateTime getStart();
 }

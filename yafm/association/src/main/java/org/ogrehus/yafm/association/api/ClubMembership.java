@@ -27,10 +27,12 @@ package org.ogrehus.yafm.association.api;
  * The membership stores additional information of the membership.
  * </p>
  * 
+ * @author Björn Witt
+ * 
  */
 public interface ClubMembership
 extends
 	Membership<AssociatedClub>
 {
-
+	// nothing defined here, is a composition or specialization of existing interface usages.
 }

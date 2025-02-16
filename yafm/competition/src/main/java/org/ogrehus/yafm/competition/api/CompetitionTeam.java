@@ -19,28 +19,41 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * 
  */	
-package org.ogrehus.yafm.association.api;
+package org.ogrehus.yafm.competition.api;
 
-import java.time.Instant;
+import java.util.List;
+
+import org.ogrehus.foundation.pattern.nameable.Nameable;
 
 /**
- * An AssociationOrganization represents the underlying structure of the association.
- * <p>
- * The organization shall provide informations like representatives, responsibilities or any historical informations.
- * </p>
+ * A CompetitionTeam represents a participant of the competition that contains a number of players that are allowed to join the competition.
  * 
  * @author Björn Witt
  * 
  */
-public interface AssociationOrganization {
+public interface CompetitionTeam
+extends
+	Nameable
+{
 
 
 
 	/**
-	 * Provides the entry date of the belonging of a member to the association.
+	 * Provides the name of the participative team.
 	 * 
-	 * @return Date of entry to the association.
+	 * @return The name of the participative team.
 	 * 
 	 */
-	Instant getFoundedDate();
+	@Override
+	String getName();
+
+
+
+	/**
+	 * Provides a list of players that are part of the participative and that are allowed to join the competition.
+	 * 
+	 * @return The List of players that join the competition.
+	 * 
+	 */
+	List<CompetitionPlayer> getSquat();
 }

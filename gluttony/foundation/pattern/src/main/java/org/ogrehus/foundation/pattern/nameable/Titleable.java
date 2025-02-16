@@ -19,28 +19,23 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * 
  */	
-package org.ogrehus.yafm.association.api;
-
-import java.time.Instant;
+package org.ogrehus.foundation.pattern.nameable;
 
 /**
- * An AssociationOrganization represents the underlying structure of the association.
- * <p>
- * The organization shall provide informations like representatives, responsibilities or any historical informations.
- * </p>
- * 
+ * A titleable provides access to a given title of the entity.
+ *
  * @author Björn Witt
  * 
  */
-public interface AssociationOrganization {
+public interface Titleable {
 
 
 
 	/**
-	 * Provides the entry date of the belonging of a member to the association.
+	 * Provides the title of this entity.
 	 * 
-	 * @return Date of entry to the association.
+	 * @return The title of this entity:
 	 * 
 	 */
-	Instant getFoundedDate();
+	String getTitle();
 }

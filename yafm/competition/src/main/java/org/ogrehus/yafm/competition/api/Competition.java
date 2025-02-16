@@ -28,12 +28,12 @@ import org.ogrehus.foundation.pattern.nameable.Nameable;
 import org.ogrehus.foundation.pattern.time.Intervalable;
 
 /**
- * An CompetitionSeason represents a time interval that contains a number of competitions.
+ * An Competition represents a contest unites a number of competitionParticipant and competition rounds that can register the details of the matches.
  * 
  * @author Björn Witt
  * 
  */
-public interface CompetitionSeason
+public interface Competition
 extends
 	  Nameable
 	, Intervalable
@@ -42,12 +42,9 @@ extends
 
 
 	/**
-	 * Provides the name of the Season.
-	 * <p>
-	 * The name of the season may describe the time interval like a year "2025" or something like "24/25" if the interval overlaps a year.
-	 * </p>
+	 * Provides the name of the competition.
 	 * 
-	 * @return Name of the season.
+	 * @return Name of the club.
 	 * 
 	 */
 	@Override String getName();
@@ -55,10 +52,10 @@ extends
 
 
 	/**
-	 * Provides the start date of the season time interval.
+	 * Provides the start date of the competition time interval.
 	 * <p>
-	 * The start date is included within the season. That means, if 15th of July may be the start date, tournaments or round may take place on the 
-	 * 15th of July.
+	 * The start date is included within the competition. That means, if 15th of July may be the start date, rounds may take place on the 15th of 
+	 * July.
 	 * 
 	 * @return The start date of the season.
 	 * 
@@ -68,10 +65,9 @@ extends
 
 
 	/**
-	 * Provides the end date of the season time interval.
+	 * Provides the end date of the competition time interval.
 	 * <p>
-	 * The end date is included within the season. That means, if 14th of July may be the end date, tournaments or round may take place on the
-	 * 14th of July.
+	 * The end date is included within the competition. That means, if 14th of July may be the end date, rounds may take place on the 14th of July.
 	 * 
 	 * @return The start date of the season.
 	 * 
@@ -81,10 +77,40 @@ extends
 
 
 	/**
-	 * Provides all competitions that take place within this season.
+	 * Provides an image that represents a visual identification the competition
 	 * 
-	 * @return 
+	 * @return The image data of the representing competition.
 	 * 
 	 */
-	List<Competition> getCompetitions();
+	byte[] getImage();
+
+
+
+	/**
+	 * Provides the maximal number of participants that are allowed to join this competition.
+	 * 
+	 * @return Max number of max participants that are allowed to join this competition.
+	 * 
+	 */
+	int getParticipantLimit();
+
+
+
+	/**
+	 * Provides the participants of this competition.
+	 * 
+	 * @return The participants of this competition.
+	 * 
+	 */
+	List<CompetitionParticipant> getParticipants();
+
+
+
+	/**
+	 * Provides the rounds that structures this competition.
+	 * 
+	 * @return The rounds of this competition.
+	 * 
+	 */
+	List<CompetitionRound> getRounds();
 }

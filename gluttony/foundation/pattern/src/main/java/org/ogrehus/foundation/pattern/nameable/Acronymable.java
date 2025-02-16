@@ -24,11 +24,13 @@ package org.ogrehus.foundation.pattern.nameable;
 /**
  * A Acronymable provides access to a given acronym (shortcut) of the entity.
  * 
+ * @author Björn Witt
+ * 
  */
 public interface Acronymable {
-	
-	
-	
+
+
+
 	/**
 	 * Provides the acronym of this entity.
 	 * 

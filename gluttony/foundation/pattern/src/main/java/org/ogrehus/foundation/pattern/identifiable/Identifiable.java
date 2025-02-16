@@ -24,15 +24,17 @@ package org.ogrehus.foundation.pattern.identifiable;
 /**
  * An Identifiable provides access to a given identifier of the entity.
  * 
+ * @author Björn Witt
+ * 
  */
 public interface Identifiable<TYPE> {
-	
-	
-	
+
+
+
 	/**
 	 * Provides the name of this entity.
 	 * 
-	 * @return The name of this entity:
+	 * @return The name of this entity.
 	 * 
 	 */
 	TYPE getIdentifier();

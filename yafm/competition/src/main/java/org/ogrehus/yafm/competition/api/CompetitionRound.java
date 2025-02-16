@@ -19,30 +19,55 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * 
  */	
-package org.ogrehus.yafm.association.api;
+package org.ogrehus.yafm.competition.api;
 
+import java.util.List;
+
+import org.ogrehus.foundation.pattern.identifiable.SequentialIndexed;
 import org.ogrehus.foundation.pattern.nameable.Nameable;
 
 /**
- * An Membership represents a belonging of a member to a specific association.
- * <p>
- * The membership stores additional information of the membership.
- * </p>
- * 
- * @param <T> Type of the membership, shall be a nameable member to allow to display all members generically by name. 
+ * A CompetitionRound represents a a match day or a tournament round as part of a competition.
  * 
  * @author Björn Witt
  * 
  */
-public interface Membership<T extends Nameable> {
+public interface CompetitionRound
+extends
+	  Nameable
+	, SequentialIndexed
+{
 
 
 
 	/**
-	 * Provides generic access to the member of this membership.
+	 * Provides the name of this competition round.
+	 * <p>
+	 * May be a simple description like match day 1, match day 2, etc.
+	 * </p>
 	 * 
-	 * @return The member of this membership. 
+	 * @return the name of this competition round.
+	 */
+	@Override
+	String getName();
+
+
+
+	/**
+	 * Provides the number of matches that are part of this round.
+	 * 
+	 * @return The team that joins the competition, or is empty if this participant is a bye.
 	 * 
 	 */
-	T getMember();
+	List<CompetitionMatch> getMatches();
+	
+	
+	
+	/**
+	 * Provides the qualification round that provide the opponent for the next round, if exists.
+	 * 
+	 * @return the qualification round that provide the opponent for the next round.
+	 * 
+	 */
+	List<CompetitionRound> getQualificationRounds();
 }
