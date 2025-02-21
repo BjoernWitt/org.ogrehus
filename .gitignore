@@ -26,3 +26,6 @@ replay_pid*
 .classpath
 .gitignore
 .settings
+/examples/json/adapter/target/maven-status/maven-compiler-plugin/compile/default-compile/*.lst
+*.lst
+maven-archiver
