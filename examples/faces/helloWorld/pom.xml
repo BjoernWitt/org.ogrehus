@@ -33,7 +33,16 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	
+	<dependencies>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.5</version>
+        </dependency>
+	</dependencies>
+
 	<build>
+		<finalName>helloWorld</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>

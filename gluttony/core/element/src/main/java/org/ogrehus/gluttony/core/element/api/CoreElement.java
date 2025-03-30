@@ -19,28 +19,24 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * 
  */	
-package org.ogrehus.foundation.pattern.identifiable;
+package org.ogrehus.gluttony.core.element.api;
 
-import java.util.UUID;
+import org.ogrehus.foundation.pattern.identifiable.Identifiable;
+import org.ogrehus.foundation.pattern.nameable.Nameable;
 
 /**
- * An UniversalUniqueIdentifiable provides access to a specific type of identifier ((UUID) of the entity.
+ * A core element provides access to the properties: name and identifier.
  * 
  * @author Björn Witt
  * 
+ * @param <ID> Type of the identifier (may be int, long, String, UUID, etc.).  
+ * 
  */
-public interface UniversalUniqueIdentifiable 
-extends 
-	Identifiable<UUID> 
+public interface CoreElement<ID> 
+extends
+	  Element
+	, Nameable
+	, Identifiable<ID>
 {
 
-
-
-	/**
-	 * Provides the universal unique identifier of this entity.
-	 * 
-	 * @return The name of this entity:
-	 * 
-	 */
-	UUID getUUID();
 }

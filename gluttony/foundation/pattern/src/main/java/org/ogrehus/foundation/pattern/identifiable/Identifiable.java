@@ -26,6 +26,9 @@ package org.ogrehus.foundation.pattern.identifiable;
  * 
  * @author Björn Witt
  * 
+ * 
+ * @param <TYPE> Type of the identifier (may be int, long, String, UUID, etc.). 
+ *  
  */
 public interface Identifiable<TYPE> {
 

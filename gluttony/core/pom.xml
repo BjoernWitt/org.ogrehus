@@ -36,5 +36,6 @@
 	
 	<modules>
 		<module>user</module>
+		<module>element</module>
 	</modules>
 </project>

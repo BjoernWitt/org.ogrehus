@@ -37,5 +37,6 @@
 	<modules>
 		<module>association</module>
 		<module>competition</module>
+		<module>editor</module>
 	</modules>
 </project>

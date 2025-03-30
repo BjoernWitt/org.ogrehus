@@ -19,28 +19,15 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * 
  */	
-package org.ogrehus.foundation.pattern.identifiable;
+package org.ogrehus.gluttony.core.element.api;
 
-import java.util.UUID;
 
 /**
- * An UniversalUniqueIdentifiable provides access to a specific type of identifier ((UUID) of the entity.
+ * An Element provides simplest access to any entity that inherits this interface.
  * 
  * @author Björn Witt
  * 
  */
-public interface UniversalUniqueIdentifiable 
-extends 
-	Identifiable<UUID> 
-{
+public interface Element {
 
-
-
-	/**
-	 * Provides the universal unique identifier of this entity.
-	 * 
-	 * @return The name of this entity:
-	 * 
-	 */
-	UUID getUUID();
 }
