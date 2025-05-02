@@ -18,42 +18,30 @@
  * along with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * 
- */	
-package org.ogrehus.yafm.competition.api;
-
-import java.util.Collection;
-
-import org.ogrehus.foundation.pattern.teamable.Teamable;
-
-/**
- * A CompetitionTeam represents a participant of the competition that contains a number of players that are allowed to join the competition.
- * 
- * @author Björn Witt
- * 
  */
-public interface CompetitionTeam
-extends
-	Teamable
-{
+ 
+#page{
+	width: 800px;
+	margin: 0 auto;
+}
 
+#header{
+	width: 100%;
+	height:50px;
+	border: 1px solid #000;
+	margin-bottom:16px;
+}
 
+#content{
+	width: 100%;
+	height:200px;
+	margin-right:16px;
+	margin-bottom:16px;
+	border: 1px solid #000;
+}
 
-	/**
-	 * Provides the name of the participative team.
-	 * 
-	 * @return The name of the participative team.
-	 * 
-	 */
-	@Override
-	String getName();
-
-
-
-	/**
-	 * Provides a list of players that are part of the participative and that are allowed to join the competition.
-	 * 
-	 * @return The List of players that join the competition.
-	 * 
-	 */
-	@Override Collection<CompetitionPlayer> getTeamMembers();
+#footer{
+	width: 100%;
+	height:50px;
+	border: 1px solid #000;
 }

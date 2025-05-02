@@ -24,7 +24,7 @@
 >
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.ogrehus.examples.faces</groupId>
-	<artifactId>helloWorld</artifactId>
+	<artifactId>layoutTemplate</artifactId>
 	<packaging>war</packaging>
 	
 	<parent>
@@ -32,18 +32,18 @@
 		<artifactId>faces</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>jakarta.platform</groupId>
-			<artifactId>jakarta.jakartaee-web-api</artifactId>
-			<version>9.0.0</version>
-<!--			<scope>provided</scope> -->
+			<artifactId>jakarta.jakartaee-api</artifactId>
+			<version>10.0.0</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
 	<build>
-		<finalName>helloWorld</finalName>
+		<finalName>layoutTemplate</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>

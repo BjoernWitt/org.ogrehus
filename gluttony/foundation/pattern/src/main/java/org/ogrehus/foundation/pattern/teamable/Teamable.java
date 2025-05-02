@@ -19,41 +19,38 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * 
  */	
-package org.ogrehus.yafm.competition.api;
+package org.ogrehus.foundation.pattern.teamable;
 
 import java.util.Collection;
 
-import org.ogrehus.foundation.pattern.teamable.Teamable;
+import org.ogrehus.foundation.pattern.nameable.Nameable;
 
 /**
- * A CompetitionTeam represents a participant of the competition that contains a number of players that are allowed to join the competition.
- * 
+ * A teamable provides access to a given number of team members of the entity.
+ *
  * @author Björn Witt
  * 
  */
-public interface CompetitionTeam
+public interface Teamable
 extends
-	Teamable
+	Nameable
 {
 
 
 
 	/**
-	 * Provides the name of the participative team.
 	 * 
-	 * @return The name of the participative team.
-	 * 
+	 * @return
 	 */
-	@Override
-	String getName();
+	@Override String getName();
 
 
 
 	/**
-	 * Provides a list of players that are part of the participative and that are allowed to join the competition.
+	 * Provides the members of the team.
 	 * 
-	 * @return The List of players that join the competition.
+	 * @return A number of team members that are part of this team.
 	 * 
 	 */
-	@Override Collection<CompetitionPlayer> getTeamMembers();
+	Collection<? extends TeamMember> getTeamMembers();
 }

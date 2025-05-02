@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	GNU Lesser General Public License v3.0
+	https://www.gnu.org/licenses/lgpl-3.0-standalone.html
+	Copyright (C) 2025 Björn Witt
+
+	This program is free software; you can redistribute it and/or
+	modify it under the terms of the GNU Lesser General Public
+	License as published by the Free Software Foundation; either
+	version 3 of the License, or (at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+	Lesser General Public License for more details.
+
+	You should have received a copy of the GNU Lesser General Public License
+	along with this program; if not, write to the Free Software Foundation,
+	Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+-->
+<web-app 
+	xmlns="https://jakarta.ee/xml/ns/jakartaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+	version="6.0"
+>
+	<display-name>layoutTemplate</display-name>
+
+	<!-- Change to "Production" when you are ready to deploy -->
+	<context-param>
+		<param-name>jakarta.faces.PROJECT_STAGE</param-name>
+		<param-value>Development</param-value>
+	</context-param>
+
+	<!-- Welcome page -->
+	<welcome-file-list>
+		<welcome-file>index.xhtml</welcome-file>
+	</welcome-file-list>
+	
+	<context-param>
+		<param-name>jakarta.faces.INTERPRET_EMPTY_STRING_SUBMITTED_VALUES_AS_NULL</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<param-name>jakarta.faces.AUTOMATIC_EXTENSIONLESS_MAPPING</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
+	<!-- JSF mapping -->
+	<servlet>
+		<servlet-name>layoutTemplate</servlet-name>
+		<servlet-class>jakarta.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<!-- Map these files with JSF -->
+	<servlet-mapping>
+		<servlet-name>layoutTemplate</servlet-name>
+		<url-pattern>/faces/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>layoutTemplate</servlet-name>
+		<url-pattern>*.jsf</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>layoutTemplate</servlet-name>
+		<url-pattern>*.faces</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>layoutTemplate</servlet-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</servlet-mapping>
+</web-app>

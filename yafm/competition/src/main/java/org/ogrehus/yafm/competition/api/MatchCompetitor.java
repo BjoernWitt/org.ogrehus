@@ -22,6 +22,7 @@
 package org.ogrehus.yafm.competition.api;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * A MatchCompetitor represents a competitor of a match that is beset by a CompetitionParticipant of this competition.
@@ -39,14 +40,42 @@ public interface MatchCompetitor {
 	 * @return <code>true</code> if this this match competitor represents no real team and will lose the match, <code>false</code> otherwise.
 	 * 
 	 */
-	boolean isBye();
+	default boolean isBye() {
+		return getParticipant().isBye();
+	}
+
+
+
+	/**
+	 * Provides the information of the name of the participating team. 
+	 * 
+	 * @return The name of the participating team.
+	 * 
+	 */
+	default String getTeamName() {
+		CompetitionParticipant participant = getParticipant();
+		
+		if (participant.isBye()) {
+			return "Freilos"; // TODO: I18N
+		}
+		
+		Optional<CompetitionTeam> team = participant.getTeam();
+		if (team.isPresent()) {
+			return team.get().getName();
+		}
+		
+		return "Unbekannt"; // TODO: I18N
+	}
 
 
 
 	/**
 	 * Provides the participant acting as the match competitor in this match.
+	 * <p>
+	 * This participant must point to a CompetitionParticipant. Even if this CompetitionParticipant is a bye.
+	 * </p> 
 	 * 
-	 * @return The participant acting as the match competitor in this match.
+	 * @return The participant acting as the match competitor in this match. May not be <code>null</code>.
 	 * 
 	 */
 	CompetitionParticipant getParticipant();
@@ -54,9 +83,10 @@ public interface MatchCompetitor {
 
 
 	/**
-	 * Provides the linup of a competitor, that contains a number of competition players that are allowed to join the match.
+	 * Provides the lineup of a competitor, that contains a number of competition players that are allowed to join the match.
 	 * 
-	 * @return A List of competition players that are allowed to join the match.
+	 * @return A List of competition players that are allowed to join the match. May be an empty, if the participant is a bye. 
+	 * May not be <code>null</code>.
 	 * 
 	 */
 	List<TeamLineup> getLineup();

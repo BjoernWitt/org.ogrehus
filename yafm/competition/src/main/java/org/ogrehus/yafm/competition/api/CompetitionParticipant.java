@@ -27,6 +27,9 @@ import org.ogrehus.foundation.pattern.nameable.Nameable;
 
 /**
  * A CompetitionParticipant represents a competitor of the match competition that can be filled by a joining team or as a bye member.
+ * <p>
+ * A CompetitionParticipant can be seen as a club that provides a participating team for the competition. 
+ * </p>
  * 
  * @author Björn Witt
  * 
@@ -41,10 +44,12 @@ extends
 	/**
 	 * Provides the information, if this participant represents no real competitor and act as a free win opponent in a match.
 	 * 
-	 * @return <code>true</code> if this participant represents no real team and will lose the match, <code>false</code> otherwise.
+	 * @return <code>true</code> if this participant provides no team and will always lose every match, <code>false</code> otherwise.
 	 * 
 	 */
-	boolean isBye();
+	default boolean isBye() {
+		return getTeam().isEmpty();
+	}
 
 
 
@@ -55,4 +60,15 @@ extends
 	 * 
 	 */
 	Optional<CompetitionTeam> getTeam();
+
+
+
+	/**
+	 * Provides the name of the participating club that acts a the competition participant.
+	 * 
+	 * @return The name of the participating club. This must not be the same as the team name. May not be <code>null</code>.
+	 * 
+	 */
+	@Override
+	String getName();
 }

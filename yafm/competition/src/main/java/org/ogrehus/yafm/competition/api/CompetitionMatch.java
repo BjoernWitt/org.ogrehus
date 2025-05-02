@@ -23,8 +23,8 @@ package org.ogrehus.yafm.competition.api;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
-import org.ogrehus.foundation.pattern.identifiable.SequentialIndexed;
 import org.ogrehus.foundation.pattern.nameable.Titleable;
 import org.ogrehus.foundation.pattern.time.Startable;
 
@@ -37,7 +37,6 @@ import org.ogrehus.foundation.pattern.time.Startable;
 public interface CompetitionMatch
 extends
 	  Titleable
-	, SequentialIndexed
 	, Startable
 {
 
@@ -53,7 +52,9 @@ extends
 	 * @return Title of this match.
 	 * 
 	 */
-	@Override String getTitle();
+	default String getTitle() {
+		return getHome().getTeamName() + " - " + getAway().getTeamName();
+	}
 
 
 
@@ -81,19 +82,9 @@ extends
 
 
 	/**
-	 * Provides the maximal number of participants that are allowed to join this competition.
-	 * 
-	 * @return Max number of max participants that are allowed to join this competition.
-	 * 
-	 */
-	int getParticipantLimit();
-
-
-
-	/**
 	 * Provides the MatchCompetitor that plays in the role of the home team.
 	 * 
-	 * @return The MatchCompetitor that plays in the role of the home team.
+	 * @return The MatchCompetitor that plays in the role of the home team. May not be <code>null</code>.
 	 * 
 	 */
 	MatchCompetitor getHome();
@@ -103,7 +94,7 @@ extends
 	/**
 	 * Provides the MatchCompetitor that plays in the role of the away team.
 	 * 
-	 * @return The MatchCompetitor that plays in the role of the away team.
+	 * @return The MatchCompetitor that plays in the role of the away team. May not be <code>null</code>.
 	 * 
 	 */
 	MatchCompetitor getAway();
@@ -136,5 +127,15 @@ extends
 	 * @return The events that happened within this match.
 	 * 
 	 */
-	List<MatchEvent> getEvents();	
+	List<MatchEvent> getEvents();
+	
+	
+	
+	/**
+	 * Provides the participant that has won this match.
+	 * 
+	 * @return The winner of this match, if it exists, otherwise is empty.
+	 * 
+	 */
+	Optional<CompetitionParticipant> getWinner();
 }

@@ -18,7 +18,7 @@
  * along with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * 
- */	
+ */
 package org.ogrehus.gluttony.core.element.api;
 
 import org.ogrehus.foundation.pattern.identifiable.Identifiable;
@@ -29,10 +29,10 @@ import org.ogrehus.foundation.pattern.nameable.Nameable;
  * 
  * @author Björn Witt
  * 
- * @param <ID> Type of the identifier (may be int, long, String, UUID, etc.).  
+ * @param <ID> Type of the identifier (may be int, long, String, UUID, etc.).
  * 
  */
-public interface CoreElement<ID> 
+public interface CoreElement<ID>
 extends
 	  Element
 	, Nameable

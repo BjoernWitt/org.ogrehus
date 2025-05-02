@@ -35,6 +35,7 @@
 
 	<modules>
 		<module>helloWorld</module>
+		<module>layoutTemplate</module>
 	</modules>
 	
 	<dependencies>

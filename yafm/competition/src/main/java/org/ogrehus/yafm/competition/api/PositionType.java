@@ -21,39 +21,32 @@
  */	
 package org.ogrehus.yafm.competition.api;
 
-import java.util.Collection;
-
-import org.ogrehus.foundation.pattern.teamable.Teamable;
-
 /**
- * A CompetitionTeam represents a participant of the competition that contains a number of players that are allowed to join the competition.
+ * A PositionType represents a role of a player in a match.
+ * 
+ * https://www.1x1sport.de/fussballtaktik/grundordnungen/
  * 
  * @author Björn Witt
  * 
  */
-public interface CompetitionTeam
-extends
-	Teamable
-{
-
-
-
-	/**
-	 * Provides the name of the participative team.
-	 * 
-	 * @return The name of the participative team.
-	 * 
-	 */
-	@Override
-	String getName();
-
-
-
-	/**
-	 * Provides a list of players that are part of the participative and that are allowed to join the competition.
-	 * 
-	 * @return The List of players that join the competition.
-	 * 
-	 */
-	@Override Collection<CompetitionPlayer> getTeamMembers();
+public enum PositionType {
+	  KEEPER
+	, RV	// Rechter Verteidiger
+	, IV	// Innenverteidiger
+	, LV	// Linker Verteidiger
+	, ZDM	// Zentrales, defensives Mittelfeld
+	, ZOM	// Zentrales, offensives Mittelfeld
+	, ZM	// Zentrales Mittelfeld
+	, RM	// Rechtes Mittelfeld
+	, LM	// Linkes Mittelfeld
+	, OM	// Offensives Mittelfeld
+	, DM	// Defensives Mittelfeld
+	, RF	// Linker Flügel
+	, LF	// Linker Flügel
+	, RS	// Rechter Stürmer
+	, LS	// Linker Stürmer
+	, ST	// Stürmer
+	, HS	// Halber Stürmer
+ 	, SUBSTITUTE
+	;
 }

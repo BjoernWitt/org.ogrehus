@@ -32,16 +32,6 @@ public interface MatchResult {
 
 
 	/**
-	 * Provides the information if a specific match competitor is the winner of this match.
-	 * 
-	 * @return <code>true</code> if the matchCompetitor is the winner of this match, <code>false</code> otherwise.
-	 * 
-	 */
-	boolean isWinner(MatchCompetitor matchCompetitor);
-
-
-
-	/**
 	 * Provides the information, if no winner is available, because the match result was a draw.
 	 * 
 	 * @return <code>true</code> if home and away scored same number of goals, <code>false</code> otherwise.

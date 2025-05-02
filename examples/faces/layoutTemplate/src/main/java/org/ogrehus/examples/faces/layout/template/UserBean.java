@@ -18,42 +18,21 @@
  * along with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * 
- */	
-package org.ogrehus.yafm.competition.api;
-
-import java.util.Collection;
-
-import org.ogrehus.foundation.pattern.teamable.Teamable;
-
-/**
- * A CompetitionTeam represents a participant of the competition that contains a number of players that are allowed to join the competition.
- * 
- * @author Björn Witt
- * 
  */
-public interface CompetitionTeam
-extends
-	Teamable
-{
+package org.ogrehus.examples.faces.layout.template;
+
+import java.io.Serializable;
+import jakarta.enterprise.context.SessionScoped;
 
 
-
-	/**
-	 * Provides the name of the participative team.
-	 * 
-	 * @return The name of the participative team.
-	 * 
-	 */
-	@Override
-	String getName();
-
-
+@SessionScoped
+public class UserBean implements Serializable{
 
 	/**
-	 * Provides a list of players that are part of the participative and that are allowed to join the competition.
-	 * 
-	 * @return The List of players that join the competition.
 	 * 
 	 */
-	@Override Collection<CompetitionPlayer> getTeamMembers();
+	private static final long serialVersionUID = -1754075564790859099L;
+
+	//...
+	
 }
