@@ -5,8 +5,8 @@ The current motivation is to make software free and the sharing of knowledge.
 
 The modules on the  first level might be turned into separate repositories, if release management comes into play.
 
-Currently ogregus.org is the container of 3 modules:
- - examples: This modul contains general usages of java, ogrehus or external framework
+Currently teh repository ogrehus.org is the container of 3 modules:
+ - examples: This modul contains usages of general java or ogrehus and external framework usages.
  - gluttony: a framework that provides reuseable software patterns focussed on enterprise applications.
  - yafm: Yet Another Football Manager
 
