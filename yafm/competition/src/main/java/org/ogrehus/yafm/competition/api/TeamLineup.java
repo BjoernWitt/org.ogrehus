@@ -21,7 +21,7 @@
  */	
 package org.ogrehus.yafm.competition.api;
 
-import org.ogrehus.foundation.pattern.nameable.Titleable;
+import org.ogrehus.gluttony.foundation.pattern.nameable.Titleable;
 
 /**
  * A CompetitionTeam represents a participant of the competition that contains a number of players that are allowed to join the competition.

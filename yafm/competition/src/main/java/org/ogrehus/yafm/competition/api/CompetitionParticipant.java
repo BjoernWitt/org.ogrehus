@@ -23,7 +23,7 @@ package org.ogrehus.yafm.competition.api;
 
 import java.util.Optional;
 
-import org.ogrehus.foundation.pattern.nameable.Nameable;
+import org.ogrehus.gluttony.foundation.pattern.nameable.Nameable;
 
 /**
  * A CompetitionParticipant represents a competitor of the match competition that can be filled by a joining team or as a bye member.

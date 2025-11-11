@@ -24,8 +24,8 @@ package org.ogrehus.yafm.association.api;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-import org.ogrehus.foundation.pattern.nameable.Acronymable;
-import org.ogrehus.foundation.pattern.nameable.Nameable;
+import org.ogrehus.gluttony.foundation.pattern.nameable.Acronymable;
+import org.ogrehus.gluttony.foundation.pattern.nameable.Nameable;
 
 /**
  * An association represents a union/organization of members that have common competitions with each others.

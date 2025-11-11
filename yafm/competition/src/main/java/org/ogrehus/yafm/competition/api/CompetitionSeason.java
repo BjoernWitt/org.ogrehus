@@ -24,8 +24,8 @@ package org.ogrehus.yafm.competition.api;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import org.ogrehus.foundation.pattern.nameable.Nameable;
-import org.ogrehus.foundation.pattern.time.Intervalable;
+import org.ogrehus.gluttony.foundation.pattern.nameable.Nameable;
+import org.ogrehus.gluttony.foundation.pattern.time.Intervalable;
 
 /**
  * An CompetitionSeason represents a time interval that contains a number of competitions.

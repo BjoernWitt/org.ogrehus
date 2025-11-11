@@ -21,12 +21,11 @@
  */	
 package org.ogrehus.yafm.association.api;
 
-import org.ogrehus.foundation.pattern.nameable.Acronymable;
-import org.ogrehus.foundation.pattern.nameable.Nameable;
+import org.ogrehus.gluttony.foundation.pattern.nameable.Acronymable;
+import org.ogrehus.gluttony.foundation.pattern.nameable.Nameable;
 
 /**
- * An AssociatedClub represents a composite of teams, 
- * that are allowed to participate in competitions of an association.
+ * An AssociatedClub represents a composite of teams, that are allowed to participate in competitions of an association.
  * 
  * @author Björn Witt
  * 

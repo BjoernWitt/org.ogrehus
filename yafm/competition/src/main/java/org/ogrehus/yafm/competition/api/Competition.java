@@ -24,8 +24,8 @@ package org.ogrehus.yafm.competition.api;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import org.ogrehus.foundation.pattern.nameable.Nameable;
-import org.ogrehus.foundation.pattern.time.Intervalable;
+import org.ogrehus.gluttony.foundation.pattern.nameable.Nameable;
+import org.ogrehus.gluttony.foundation.pattern.time.Intervalable;
 
 /**
  * An Competition represents a contest unites a number of competitionParticipant and competition rounds that can register the details of the matches.

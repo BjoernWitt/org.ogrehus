@@ -21,7 +21,7 @@
  */	
 package org.ogrehus.yafm.competition.api;
 
-import org.ogrehus.foundation.pattern.nameable.Titleable;
+import org.ogrehus.gluttony.foundation.pattern.nameable.Titleable;
 
 /**
  * A MatchEvent represents an informative relevant happening in a match.

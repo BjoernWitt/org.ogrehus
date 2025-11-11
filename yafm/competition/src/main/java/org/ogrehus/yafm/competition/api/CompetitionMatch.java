@@ -25,8 +25,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
-import org.ogrehus.foundation.pattern.nameable.Titleable;
-import org.ogrehus.foundation.pattern.time.Startable;
+import org.ogrehus.gluttony.foundation.pattern.nameable.Titleable;
+import org.ogrehus.gluttony.foundation.pattern.time.Startable;
 
 /**
  * An CompetitionMatch represents a match that brings a decision about how this competition works out by a winner, looser or a draw.

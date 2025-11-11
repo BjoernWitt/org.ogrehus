@@ -23,7 +23,7 @@ package org.ogrehus.yafm.competition.api;
 
 import java.util.Collection;
 
-import org.ogrehus.foundation.pattern.teamable.Teamable;
+import org.ogrehus.gluttony.foundation.pattern.teamable.Teamable;
 
 /**
  * A CompetitionTeam represents a participant of the competition that contains a number of players that are allowed to join the competition.

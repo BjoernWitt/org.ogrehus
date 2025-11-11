@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>280</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Nameable
+--
+
+--
++getName():String
++isNameAvailable():boolean
+--
+A nameable entity is an entity that has 
+a name.
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>20</y>
+      <w>280</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Titleable
+--
+
+--
++getTitle():String
++isTitleAvailable():boolean
+--
+A titleable entity is an entity that has 
+a title.
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>20</y>
+      <w>280</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Acronymable
+--
+
+--
++getAcronym():String
++isAcronymAvailable():boolean
+--
+An acronymable entity is an entity that has 
+an acronym.
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

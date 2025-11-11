@@ -36,5 +36,6 @@
 	
 	<modules>
 		<module>pattern</module>
+		<module>persistence</module>		
 	</modules>
 </project>

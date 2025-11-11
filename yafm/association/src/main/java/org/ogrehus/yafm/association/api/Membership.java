@@ -21,7 +21,7 @@
  */	
 package org.ogrehus.yafm.association.api;
 
-import org.ogrehus.foundation.pattern.nameable.Nameable;
+import org.ogrehus.gluttony.foundation.pattern.nameable.Nameable;
 
 /**
  * An Membership represents a belonging of a member to a specific association.

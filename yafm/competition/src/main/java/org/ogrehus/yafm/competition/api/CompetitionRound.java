@@ -23,8 +23,8 @@ package org.ogrehus.yafm.competition.api;
 
 import java.util.List;
 
-import org.ogrehus.foundation.pattern.identifiable.SequentialIndexed;
-import org.ogrehus.foundation.pattern.nameable.Nameable;
+import org.ogrehus.gluttony.foundation.pattern.nameable.Nameable;
+import org.ogrehus.gluttony.foundation.pattern.identifiable.SequentialIndexable;
 
 /**
  * A CompetitionRound represents a a match day or a tournament round as part of a competition.
@@ -35,7 +35,7 @@ import org.ogrehus.foundation.pattern.nameable.Nameable;
 public interface CompetitionRound
 extends
 	  Nameable
-	, SequentialIndexed
+	, SequentialIndexable
 {
 
 

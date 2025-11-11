@@ -21,8 +21,8 @@
  */
 package org.ogrehus.gluttony.core.element.api;
 
-import org.ogrehus.foundation.pattern.identifiable.Identifiable;
-import org.ogrehus.foundation.pattern.nameable.Nameable;
+import org.ogrehus.gluttony.foundation.pattern.nameable.Nameable;
+import org.ogrehus.gluttony.foundation.pattern.identifiable.UniqueIdentifiable;
 
 /**
  * A core element provides access to the properties: name and identifier.
@@ -36,7 +36,7 @@ public interface CoreElement<ID>
 extends
 	  Element
 	, Nameable
-	, Identifiable<ID>
+	, UniqueIdentifiable<ID>
 {
 
 }

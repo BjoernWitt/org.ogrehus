@@ -44,8 +44,8 @@ public class CompetitionExample {
 		};
 		public static Competition BUNDESLIGA2 = new Competition() {
 			@Override public LocalDateTime getStart() {return LocalDateTime.of(2024, 7, 15, 12, 0, 0);}
-			@Override public List<CompetitionRound> getRounds() {return Arrays.asList(null);}
-			@Override public List<CompetitionParticipant> getParticipants() {return Arrays.asList(null);}
+			@Override public List<CompetitionRound> getRounds() {return Collections.emptyList();}
+			@Override public List<CompetitionParticipant> getParticipants() {return Collections.emptyList();}
 			@Override public int getParticipantLimit() {return 18;}
 			@Override public String getName() {return "2. Bundesliga";}
 			@Override public byte[] getImage() {return null;}
@@ -53,8 +53,8 @@ public class CompetitionExample {
 		};
 		public static Competition LIGA3 = new Competition() {
 			@Override public LocalDateTime getStart() {return LocalDateTime.of(2024, 7, 15, 12, 0, 0);}
-			@Override public List<CompetitionRound> getRounds() {return Arrays.asList(null);}
-			@Override public List<CompetitionParticipant> getParticipants() {return Arrays.asList(null);}
+			@Override public List<CompetitionRound> getRounds() {return Collections.emptyList();}
+			@Override public List<CompetitionParticipant> getParticipants() {return Collections.emptyList();}
 			@Override public int getParticipantLimit() {return 18;}
 			@Override public String getName() {return "3. Liga";}
 			@Override public byte[] getImage() {return null;}
