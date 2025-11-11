@@ -10,7 +10,7 @@ Currently ogregus.org is the container of 3 modules:
  - gluttony: a framework that provides reuseable software patterns focussed on enterprise applications.
  - yafm: Yet Another Football Manager
 
-![UML diagram of the modul/package structure of org.ogrehus](uml_package.png)
+![UML diagram of the modul/package structure of org.ogrehus](uml/uml_package.png)
 
 
 
